@@ -62,8 +62,6 @@
     <script>
         function playSound(e) {
             const clickKeyCode = e.target.dataset.key || e.target.parentNode.dataset.key;
-            console.log(clickKeyCode);
-            console.log(e);
             const key = document.querySelector(`.key[data-key="${e.keyCode || clickKeyCode}"`);
             const audio = document.querySelector(`audio[data-key="${e.keyCode || clickKeyCode}"`);
 
