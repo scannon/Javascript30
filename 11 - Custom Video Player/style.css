@@ -88,10 +88,10 @@ body {
 
 .display__value {
     color: #ffffff;
-    font: 8px Arial, sans-serif;
-    margin: 0;
-    padding: 10px 0 10px 10px;
-    flex: 0.30;
+    font: 10px Arial, sans-serif;
+    padding: 10px 0 10px 0;
+    flex: .35;
+    text-align: right;
 }
 
 .progress {
