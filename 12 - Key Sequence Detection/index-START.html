@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Key Detection</title>
-    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+    <!-- <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script> -->
 </head>
 
 <body>
     <script>
-        const pressed = [];
-        const secretCode = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightEnter';
+        let pressed = [];
+        const secretCode = '38384040373937396665';
+
         window.addEventListener('keyup', e => {
-            console.log(e.key);
-            pressed.push(e.key);
+            pressed.push(e.keyCode);
+
+            console.log(-secretCode.length - 1);
+            console.log(pressed.length - secretCode.length);
+            console.log(pressed);
             pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+
             if (pressed.join('').includes(secretCode)) {
                 console.log('DING DING!');
-                cornify_add();
+                pressed = [];
             }
-            console.log(pressed);
         });
     </script>
 </body>
